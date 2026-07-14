@@ -27,6 +27,10 @@ for page in pages:
     rel = page.relative_to(ROOT)
     html = page.read_text(encoding="utf-8")
 
+    # Redirect stubs (meta refresh) are exempt from the content checks.
+    if 'http-equiv="refresh"' in html:
+        continue
+
     if '<link rel="stylesheet"' not in html:
         errors.append(f"{rel}: missing stylesheet link")
     if "<title>" not in html:

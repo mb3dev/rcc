@@ -1,0 +1,45 @@
+name: Import RCC website
+
+on:
+  push:
+    paths:
+      - ".github/workflows/import-site.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  import-site:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out target repository
+        uses: actions/checkout@v4
+
+      - name: Copy website source from the original repository
+        shell: bash
+        run: |
+          git clone --depth 1 https://github.com/waypointinstitute/site.git /tmp/rcc-source
+          find . -mindepth 1 -maxdepth 1 ! -name .git ! -name .github -exec rm -rf {} +
+          cp -a /tmp/rcc-source/rcc-site/. .
+          rm -rf bundle
+          python - <<'PY'
+          from pathlib import Path
+          p = Path('README.md')
+          text = p.read_text()
+          text = text.replace(
+              'Import the GitHub repository into Vercel. If this project is stored in a repository subdirectory, set the Vercel **Root Directory** to `rcc-site`.',
+              'Import `mb3dev/rcc` into Vercel. The website is stored at the repository root, so no custom Root Directory is required.'
+          )
+          p.write_text(text)
+          PY
+
+      - name: Commit imported website
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if ! git diff --cached --quiet; then
+            git commit -m "Import Religious Cognition Collaborative website"
+            git push
+          fi

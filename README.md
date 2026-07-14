@@ -27,7 +27,10 @@ page uses relative URLs.
 
 - **No build step, no framework, no JavaScript routing.** Each URL is a real
   HTML file (`about/index.html` → `/about/`), so pages load even if JavaScript
-  is disabled and nothing can break at build time.
+  is disabled and nothing can break at build time. The single `site.js` is
+  progressive enhancement only (scroll reveals, Escape-to-close menu, form
+  email composition) — the full-screen menu itself is a CSS-only
+  `<details>` element and every page renders completely without JS.
 - **Relative URLs everywhere**, so the site works under the `/rcc/` project
   path today and a custom domain later without modification.
 - **No external requests** — system fonts, inline SVG assets, no CDNs.

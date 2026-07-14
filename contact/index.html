@@ -10,21 +10,40 @@
   <title>Contact | Religious Cognition Collaborative</title>
   <link rel="icon" href="../favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="../styles.css">
+  <script defer src="../site.js"></script>
 </head>
 <body>
   <a class="skip-link" href="#content">Skip to content</a>
   <header class="site-header">
     <div class="shell header-inner">
       <a class="brand" href="../" aria-label="Religious Cognition Collaborative home">
-        <img src="../logo-mark.svg" width="48" height="48" alt="">
+        <img src="../logo-mark.svg" width="44" height="44" alt="">
         <span class="brand-text"><strong>Religious Cognition</strong><span>Collaborative</span></span>
       </a>
-      <nav class="desktop-nav" aria-label="Primary navigation">
-        <a href="../about/">About</a><a href="../research/">Research</a><a href="../projects/">Projects</a><a href="../people/">People</a><a href="../publications/">Publications</a><a href="../collaborate/">Collaborate</a><a href="../support/">Support</a><a href="../contact/" aria-current="page">Contact</a>
-      </nav>
-      <details class="mobile-menu"><summary aria-label="Open navigation">Menu</summary><nav aria-label="Mobile navigation">
-        <a href="../">Home</a><a href="../about/">About</a><a href="../research/">Research</a><a href="../projects/">Projects</a><a href="../people/">People</a><a href="../publications/">Publications</a><a href="../collaborate/">Collaborate</a><a href="../support/">Support</a><a href="../contact/" aria-current="page">Contact</a>
-      </nav></details>
+      <div class="header-actions">
+        <a class="header-cta" href="../collaborate/">Collaborate</a>
+        <details class="menu">
+          <summary aria-label="Site navigation"><span class="menu-bars" aria-hidden="true"></span><span class="label-menu">Menu</span><span class="label-close">Close</span></summary>
+          <div class="menu-overlay">
+            <div class="menu-intro">
+              <div class="eyebrow">Religious Cognition Collaborative</div>
+              <p>Interdisciplinary research on religion, cognition, and human experience.</p>
+              <p><a href="mailto:barrostheology@gmail.com">barrostheology@gmail.com</a></p>
+            </div>
+            <nav class="menu-nav" aria-label="Primary navigation">
+          <a href="../">Home</a>
+          <a href="../about/">About</a>
+          <a href="../research/">Research</a>
+          <a href="../projects/">Projects</a>
+          <a href="../people/">People</a>
+          <a href="../publications/">Publications</a>
+          <a href="../collaborate/">Collaborate</a>
+          <a href="../support/">Support</a>
+          <a href="../contact/" aria-current="page">Contact</a>
+            </nav>
+          </div>
+        </details>
+      </div>
     </div>
   </header>
   <main id="content">
@@ -34,7 +53,7 @@
           <div class="eyebrow">Contact</div>
           <h1>Contact</h1>
         </div>
-        <div class="page-intro">
+        <div class="page-intro reveal">
           <p>Contact RCC regarding research collaboration, project development, funding, media inquiries, or general organizational questions. Please include enough information for us to understand the purpose of your message.</p>
         </div>
       </div>
@@ -42,12 +61,12 @@
 
     <section class="section">
       <div class="shell contact-layout">
-        <div class="contact-aside">
+        <div class="contact-aside reveal">
           <h2>Email</h2>
           <p><a href="mailto:barrostheology@gmail.com">barrostheology@gmail.com</a></p>
           <p>RCC is a research organization and does not provide mental health diagnosis, treatment, crisis support, or individual medical advice.</p>
         </div>
-        <form class="contact-form" data-mailto="barrostheology@gmail.com" data-subject="Website inquiry — RCC">
+        <form class="contact-form reveal" data-mailto="barrostheology@gmail.com" data-subject="Website inquiry — RCC">
           <div class="form-grid">
             <label class="field"><span>Name</span><input type="text" name="name" required></label>
             <label class="field"><span>Email</span><input type="email" name="email" required></label>
@@ -64,35 +83,20 @@
     </section>
   </main>
   <footer class="site-footer">
-    <div class="shell footer-grid">
-      <div><div class="footer-name">Religious Cognition Collaborative</div><p>The Religious Cognition Collaborative advances interdisciplinary research on religious belief, experience, cognition, and behavior.</p></div>
-      <nav aria-label="Footer navigation"><a href="../about/">About</a><a href="../research/">Research</a><a href="../projects/">Projects</a><a href="../people/">People</a><a href="../publications/">Publications</a><a href="../collaborate/">Collaborate</a><a href="../support/">Support</a><a href="../contact/" aria-current="page">Contact</a><a href="../privacy/">Privacy</a></nav>
-      <div class="footer-contact"><div class="eyebrow">Research inquiries</div><a href="mailto:barrostheology@gmail.com">barrostheology@gmail.com</a></div>
+    <div class="shell">
+      <div class="footer-top">
+        <div>
+          <p class="footer-word">Religious Cognition Collaborative</p>
+          <p>The Religious Cognition Collaborative advances interdisciplinary research on religious belief, experience, cognition, and behavior.</p>
+        </div>
+        <div class="footer-contact">
+          <div class="eyebrow">Research inquiries</div>
+          <a href="mailto:barrostheology@gmail.com">barrostheology@gmail.com</a>
+        </div>
+      </div>
+      <nav class="footer-nav" aria-label="Footer navigation"><a href="../about/">About</a><a href="../research/">Research</a><a href="../projects/">Projects</a><a href="../people/">People</a><a href="../publications/">Publications</a><a href="../collaborate/">Collaborate</a><a href="../support/">Support</a><a href="../contact/" aria-current="page">Contact</a><a href="../privacy/">Privacy</a></nav>
+      <div class="footer-bottom"><span>&copy; 2026 Religious Cognition Collaborative. All rights reserved.</span><span>Interdisciplinary research on religion, cognition, and human experience.</span></div>
     </div>
-    <div class="shell footer-bottom"><span>&copy; 2026 Religious Cognition Collaborative. All rights reserved.</span><span>Interdisciplinary research on religion, cognition, and human experience.</span></div>
   </footer>
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-  document.querySelectorAll('form[data-mailto]').forEach(function (form) {
-    form.addEventListener('submit', function (event) {
-      event.preventDefault();
-      var lines = [];
-      var subject = form.getAttribute('data-subject') || 'Website inquiry';
-      form.querySelectorAll('input, select, textarea').forEach(function (field) {
-        if (!field.name || !field.value.trim()) { return; }
-        if (field.name === 'subject') { subject = field.value.trim(); return; }
-        var label = field.closest('.field');
-        label = label ? label.querySelector('span').textContent : field.name;
-        lines.push(label + ': ' + field.value.trim());
-      });
-      window.location.href = 'mailto:' + form.getAttribute('data-mailto') +
-        '?subject=' + encodeURIComponent(subject) +
-        '&body=' + encodeURIComponent(lines.join('\n\n'));
-      var confirmation = form.querySelector('.form-confirmation');
-      if (confirmation) { confirmation.hidden = false; }
-    });
-  });
-});
-</script>
 </body>
 </html>

@@ -4,8 +4,8 @@ Static, responsive website configured for Vercel.
 
 ## Deploy with Vercel
 
-1. Import `waypointinstitute/site`.
-2. Set the Root Directory to `rcc-site`.
+1. Import `mb3dev/rcc`.
+2. Leave the Root Directory at the repository root.
 3. Select **Other** as the framework preset if Vercel does not detect it automatically.
 4. Leave Build Command and Output Directory blank.
 5. Deploy.

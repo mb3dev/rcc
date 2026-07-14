@@ -111,7 +111,7 @@ h1, h2, h3, h4 { font-family: var(--serif); font-weight: 500; letter-spacing: -0
 .page-head .lead { margin: 22px 0 0; color: var(--muted); font-size: 1.12rem; max-width: 60ch; }
 
 /* ---------------------------------------------------------------- project cards */
-.card-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 20px; }
 .card { display: flex; flex-direction: column; padding: 26px 24px 22px; border: 1px solid var(--line-strong); border-radius: 14px; background: var(--white); transition: border-color .18s ease, transform .18s ease, box-shadow .18s ease; }
 .card:hover { border-color: var(--teal-strong); transform: translateY(-3px); box-shadow: 0 14px 34px rgba(11,36,52,.07); }
 .status { font-size: .68rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--teal-strong); display: inline-flex; align-items: center; gap: 7px; }

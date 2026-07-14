@@ -49,16 +49,16 @@ the pages were originally emitted by a small Python generator, and
 
 ## Before final public launch (from the content brief)
 
-- Replace the temporary contact email (`barrostheology@gmail.com`) once a
-  general RCC address exists — it appears in the footer of every page and on
-  the Contact, Collaborate, and People pages.
+- Add a public contact channel. No email or contact form is shown yet; the
+  Contact and Collaborate pages state that a channel is being established.
+  When a general RCC address or a form service exists, wire it in there.
 - Add the sponsoring nonprofit's exact legal name, approved logo, and the
   "Organizational Home" / "How support is administered" sections (About and
   Support pages) — currently omitted per the brief.
 - Add the current project module (Home and Projects pages) once the title and
   approved summary are released.
-- Replace the initials portrait on the People page with an approved headshot.
-- Add verified publications to the Publications page and restore the filter
-  bar when there are entries to filter.
-- Add a donation button routed through the sponsor's payment system (Support
-  page) — currently links to the Contact page instead.
+- Add team members to the People page once participants confirm their public
+  listing (the page currently shows a forthcoming note, no names).
+- Add verified publications to the Publications page.
+- Add a donation channel routed through the sponsor's payment system (Support
+  page) once the sponsoring nonprofit is in place.

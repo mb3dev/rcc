@@ -33,26 +33,5 @@
     } else {
       revealed.forEach(function (el) { el.classList.add('in'); });
     }
-
-    /* Forms: compose a pre-addressed email (no backend on static hosting). */
-    document.querySelectorAll('form[data-mailto]').forEach(function (form) {
-      form.addEventListener('submit', function (event) {
-        event.preventDefault();
-        var lines = [];
-        var subject = form.getAttribute('data-subject') || 'Website inquiry';
-        form.querySelectorAll('input, select, textarea').forEach(function (field) {
-          if (!field.name || !field.value.trim()) { return; }
-          if (field.name === 'subject') { subject = field.value.trim(); return; }
-          var label = field.closest('.field');
-          label = label ? label.querySelector('span').textContent : field.name;
-          lines.push(label + ': ' + field.value.trim());
-        });
-        window.location.href = 'mailto:' + form.getAttribute('data-mailto') +
-          '?subject=' + encodeURIComponent(subject) +
-          '&body=' + encodeURIComponent(lines.join('\n\n'));
-        var confirmation = form.querySelector('.form-confirmation');
-        if (confirmation) { confirmation.hidden = false; }
-      });
-    });
   });
 })();

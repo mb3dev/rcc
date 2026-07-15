@@ -42,10 +42,10 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 500; letter-spacing: -0.012
 
 /* ---------------------------------------------------------------- header */
 .site-header { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.92); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
-.header-inner { min-height: 66px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+.header-inner { min-height: 84px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
 .brand { display: inline-flex; align-items: center; }
-.logo-full { height: 40px; width: auto; display: block; }
-.logo-icon { height: 34px; width: auto; display: none; }
+.logo-full { height: 58px; width: auto; display: block; }
+.logo-icon { height: 42px; width: auto; display: none; }
 
 .nav-wrap { position: relative; display: flex; align-items: center; }
 .nav-cb { position: absolute; width: 1px; height: 1px; opacity: 0; pointer-events: none; }

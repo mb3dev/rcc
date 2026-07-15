@@ -202,6 +202,35 @@ h1, h2, h3, h4 { font-family: var(--serif); font-weight: 500; letter-spacing: -0
 .footer-nav a:hover { color: var(--white); }
 .footer-nav a[aria-current="page"] { color: var(--white); }
 .footer-bottom { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; color: #7f95a0; font-size: .8rem; }
+.footer-reach .eyebrow { display: block; color: #8db8b5; margin-bottom: 10px; }
+.footer-reach a { color: var(--white); font-size: 1.02rem; border-bottom: 1px solid rgba(220,235,234,.35); }
+.footer-reach a:hover { color: var(--gold); }
+
+/* ---------------------------------------------------------------- header secondary CTA */
+.header-right { display: flex; align-items: center; gap: 22px; }
+.header-cta { font-size: .86rem; font-weight: 600; color: var(--teal-strong); padding: 9px 16px; border: 1px solid var(--line-strong); border-radius: 9px; transition: border-color .18s ease, background .18s ease; }
+.header-cta:hover { border-color: var(--teal-strong); background: var(--paper); }
+
+/* ---------------------------------------------------------------- provenance labels */
+.facts-label { font-size: .66rem; text-transform: uppercase; letter-spacing: .12em; font-weight: 700; color: var(--muted); margin-bottom: 12px; }
+.facts-label-sep { margin-top: 22px; padding-top: 20px; border-top: 1px solid var(--line-strong); }
+
+/* ---------------------------------------------------------------- profile (People) */
+.profile { display: grid; grid-template-columns: 190px 1fr; gap: clamp(28px, 4vw, 56px); align-items: start; }
+.profile-portrait { aspect-ratio: 1; border-radius: 16px; background: linear-gradient(150deg, var(--navy-deep), var(--navy-2)); display: grid; place-items: center; color: rgba(255,255,255,.9); font-family: var(--serif); font-size: 3rem; }
+.profile-title { font-size: .74rem; text-transform: uppercase; letter-spacing: .16em; font-weight: 700; color: var(--teal-strong); }
+.profile-copy h2 { font-size: clamp(1.9rem, 3vw, 2.5rem); margin: 8px 0 14px; }
+.profile-copy p { color: var(--muted); margin: 0 0 14px; max-width: 64ch; }
+.profile-links a { color: var(--teal-strong); font-weight: 600; }
+.pending-note { color: var(--muted); font-weight: 400; }
+
+/* ---------------------------------------------------------------- outputs */
+.output-list { display: flex; flex-direction: column; border-top: 1px solid var(--line); }
+.output-row { display: grid; grid-template-columns: 210px 1fr; gap: 6px 28px; padding: 22px 0; border-bottom: 1px solid var(--line); align-items: baseline; transition: background .15s ease; }
+.output-row:hover { background: var(--paper); }
+.output-row .status { grid-column: 1; grid-row: 1; }
+.output-title { grid-column: 2; grid-row: 1; font-family: var(--serif); font-size: 1.22rem; line-height: 1.25; }
+.output-desc { grid-column: 2; grid-row: 2; color: var(--muted); font-size: .95rem; margin-top: 4px; }
 
 /* ---------------------------------------------------------------- responsive */
 @media (max-width: 860px) {
@@ -216,9 +245,14 @@ h1, h2, h3, h4 { font-family: var(--serif); font-weight: 500; letter-spacing: -0
   .primary-nav a:hover, .primary-nav a[aria-current="page"] { background: var(--paper); }
   .hero-grid { grid-template-columns: 1fr; min-height: 0; gap: 34px; }
   .hero-visual { order: -1; max-width: 320px; justify-self: start; }
-  .card-grid, .area-grid, .area-3, .content-grid, .project-top, .def-grid, .form-row, .footer-top { grid-template-columns: 1fr; }
+  .card-grid, .area-grid, .area-3, .content-grid, .project-top, .def-grid, .form-row, .footer-top, .profile { grid-template-columns: 1fr; }
   .area-grid { gap: 1px; }
   .facts .row { grid-template-columns: 1fr; gap: 4px; }
+  .header-cta { display: none; }
+  .profile-portrait { width: 120px; aspect-ratio: 1; }
+  .output-row { grid-template-columns: 1fr; gap: 4px; }
+  .output-row .status, .output-title, .output-desc { grid-column: 1; }
+  .output-row .status { grid-row: auto; } .output-title { grid-row: auto; } .output-desc { grid-row: auto; }
 }
 
 @media (prefers-reduced-motion: reduce) {

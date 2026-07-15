@@ -97,6 +97,16 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 500; letter-spacing: -0.012
 .badge-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--teal); flex: none; }
 .badge-pending .badge-dot { background: var(--gold); }
 .badge-pending { color: var(--gold-ink); border-color: #e6d6b6; }
+.badge-prep .badge-dot { background: var(--muted); }
+.badge-prep { color: var(--muted); }
+
+/* domain tags (Humanities / Science; hybrid projects carry both) */
+.card-tags, .head-tags { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 10px; }
+.head-tags { margin-bottom: 6px; }
+.tags { display: inline-flex; flex-wrap: wrap; gap: 6px; }
+.tag { font-size: .64rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; padding: 3px 9px; border-radius: 6px; border: 1px solid var(--line-strong); color: var(--muted); background: var(--white); white-space: nowrap; }
+.tag-science { color: var(--teal-strong); border-color: #bfe0dd; background: #f1f8f7; }
+.tag-humanities { color: #6b4f8a; border-color: #ddd0ea; background: #f7f4fb; }
 
 /* ---------------------------------------------------------------- research areas / pathways */
 .area-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
@@ -128,6 +138,16 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 500; letter-spacing: -0.012
 /* ---------------------------------------------------------------- project detail */
 .proj-groups { display: flex; flex-direction: column; gap: clamp(40px, 5vw, 60px); }
 .proj-group-title { font-size: 1.3rem; margin: 0 0 20px; padding-bottom: 12px; border-bottom: 1px solid var(--line); color: var(--ink); }
+
+/* initiatives (broader foci grouping multiple projects) */
+.initiative-list { display: flex; flex-direction: column; gap: clamp(28px, 4vw, 44px); }
+.initiative { border: 1px solid var(--line-strong); border-radius: 16px; background: var(--white); padding: clamp(24px, 3vw, 34px); }
+.initiative-head { padding-bottom: 22px; margin-bottom: 24px; border-bottom: 1px solid var(--line); }
+.initiative-heading { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px; }
+.initiative-name { font-size: clamp(1.4rem, 2.2vw, 1.75rem); margin: 0; line-height: 1.15; }
+.initiative-desc { color: var(--muted); margin: 12px 0 0; max-width: 62ch; }
+.initiative-lead { margin: 14px 0 0; font-size: .9rem; color: var(--ink); }
+.initiative-lead span { display: inline-block; margin-right: 8px; font-size: .68rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
 .project-top { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(260px, .8fr); gap: clamp(32px, 5vw, 64px); align-items: start; }
 .prose-stack { display: flex; flex-direction: column; gap: 30px; }
 .facts { border: 1px solid var(--line-strong); border-radius: 14px; padding: 24px 26px; background: var(--paper); position: static; }

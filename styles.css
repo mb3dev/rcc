@@ -249,6 +249,8 @@ h1, h2, h3, h4 { font-family: var(--serif); font-weight: 500; letter-spacing: -0
   .area-grid { gap: 1px; }
   .facts .row { grid-template-columns: 1fr; gap: 4px; }
   .header-cta { display: none; }
+  .path { grid-template-columns: 1fr; gap: 6px; }
+  .path .value { overflow-wrap: anywhere; }
   .profile-portrait { width: 120px; aspect-ratio: 1; }
   .output-row { grid-template-columns: 1fr; gap: 4px; }
   .output-row .status, .output-title, .output-desc { grid-column: 1; }

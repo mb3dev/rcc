@@ -88,6 +88,15 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 500; letter-spacing: -0.012
 
 /* ---------------------------------------------------------------- cards + badges */
 .card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+.card-grid-lead { grid-template-columns: repeat(auto-fill, minmax(300px, 460px)); }
+.adjacent-list { display: flex; flex-direction: column; gap: 18px; }
+.adjacent-item h3 { font-size: 1.08rem; margin: 0 0 6px; }
+.adjacent-item h3 a { color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--line-strong); padding-bottom: 1px; }
+.adjacent-item h3 a:hover { color: var(--teal-strong); border-color: var(--teal-strong); }
+.adjacent-item p { margin: 0; color: var(--muted); font-size: .95rem; }
+.org-status { max-width: 72ch; }
+.org-status h2 { font-size: 1.15rem; margin: 0 0 10px; }
+.org-status p { color: var(--muted); margin: 0; font-size: .96rem; }
 .card { display: flex; flex-direction: column; padding: 26px 24px 22px; border: 1px solid var(--line-strong); border-radius: 14px; background: var(--white); transition: border-color .18s ease, transform .18s ease, box-shadow .18s ease; }
 .card:hover { border-color: var(--teal-strong); transform: translateY(-2px); box-shadow: 0 12px 30px rgba(11,36,52,.06); }
 .card h3 { font-size: 1.3rem; line-height: 1.22; margin: 14px 0 10px; }
@@ -199,7 +208,9 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 500; letter-spacing: -0.012
 .footer-badge { background: var(--white); border-radius: 12px; padding: 8px; display: inline-flex; }
 .footer-badge img { height: 40px; width: 40px; display: block; }
 .footer-word { font-family: var(--serif); color: var(--white); font-size: 1.15rem; line-height: 1.15; }
+.footer-copy { display: flex; flex-direction: column; gap: 10px; max-width: 52ch; }
 .footer-sentence { color: #93a7b0; max-width: 46ch; margin: 0; font-size: .95rem; }
+.footer-legal { color: #7f95a0; font-size: 13px; line-height: 1.5; margin: 0; }
 .footer-bottom { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; padding-top: 24px; }
 .footer-nav { display: flex; flex-wrap: wrap; gap: 10px 22px; font-size: .88rem; }
 .footer-nav a { color: #b7c6cc; }

@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" role="img" aria-labelledby="title desc">
-  <title id="title">Religious Cognition Collaborative mark</title>
-  <desc id="desc">Three intersecting circular forms representing cognition, culture, and collaboration.</desc>
-  <rect width="96" height="96" rx="20" fill="#0B2434"/>
-  <circle cx="38" cy="39" r="20" fill="none" stroke="#8DB8B5" stroke-width="5"/>
-  <circle cx="58" cy="39" r="20" fill="none" stroke="#D4B982" stroke-width="5"/>
-  <circle cx="48" cy="57" r="20" fill="none" stroke="#DDE9E8" stroke-width="5"/>
-</svg>

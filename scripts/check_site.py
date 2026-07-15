@@ -54,7 +54,8 @@ for page in pages:
         if not target.exists():
             errors.append(f"{rel}: broken reference '{url}'")
 
-for asset in ("styles.css", "favicon.svg", "logo-mark.svg", "404.html", ".nojekyll"):
+for asset in ("styles.css", "site.js", "favicon-32.png", "apple-touch-icon.png",
+              "assets/logo-full.png", "assets/logo-icon.png", "404.html", ".nojekyll"):
     if not (ROOT / asset).exists():
         errors.append(f"missing required file: {asset}")
 

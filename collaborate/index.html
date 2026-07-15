@@ -3,12 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Propose a research collaboration, methods partnership, dataset analysis, or student research opportunity with RCC.">
-  <meta property="og:title" content="Collaborate | Religious Cognition Collaborative">
-  <meta property="og:description" content="Propose a research collaboration, methods partnership, dataset analysis, or student research opportunity with RCC.">
+  <meta name="description" content="Propose a research question, dataset, or capability to the Religious Cognition Collaborative.">
+  <meta property="og:title" content="Collaborate | The Religious Cognition Collaborative">
+  <meta property="og:description" content="Propose a research question, dataset, or capability to the Religious Cognition Collaborative.">
   <meta property="og:type" content="website">
-  <title>Collaborate | Religious Cognition Collaborative</title>
-  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <title>Collaborate | The Religious Cognition Collaborative</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png">
   <link rel="stylesheet" href="../styles.css">
   <script defer src="../site.js"></script>
 </head>
@@ -16,66 +17,84 @@
   <a class="skip-link" href="#content">Skip to content</a>
   <header class="site-header">
     <div class="shell header-inner">
-      <a class="brand" href="../" aria-label="Religious Cognition Collaborative home">
-        <img src="../logo-mark.svg" width="40" height="40" alt="">
-        <span class="brand-text"><strong>Religious Cognition</strong><span>Collaborative</span></span>
+      <a class="brand" href="../" aria-label="The Religious Cognition Collaborative home">
+        <img class="logo-full" src="../assets/logo-full.png" width="376" height="140" alt="The Religious Cognition Collaborative">
+        <img class="logo-icon" src="../assets/logo-icon.png" width="256" height="256" alt="The Religious Cognition Collaborative">
       </a>
-      <div class="header-right">
-        <div class="nav-wrap">
-          <input class="nav-cb" type="checkbox" id="nav-cb" aria-label="Toggle navigation menu">
-          <label class="nav-toggle" for="nav-cb"><span class="nav-bars" aria-hidden="true"></span>Menu</label>
-          <nav class="primary-nav" aria-label="Primary">
-            <a href="../about/">About</a><a href="../research/">Research</a><a href="../projects/">Projects</a><a href="../contact/">Contact</a>
-          </nav>
-        </div>
-        <a class="header-cta" href="../collaborate/">Collaborate</a>
+      <div class="nav-wrap">
+        <input class="nav-cb" type="checkbox" id="nav-cb" aria-label="Toggle navigation menu">
+        <label class="nav-toggle" for="nav-cb"><span class="nav-bars" aria-hidden="true"></span>Menu</label>
+        <nav class="primary-nav" aria-label="Primary">
+          <a href="../about/">About</a><a href="../research/">Research</a><a href="../projects/">Projects</a><a href="../collaborate/" aria-current="page">Collaborate</a><a href="../contact/">Contact</a>
+        </nav>
       </div>
     </div>
   </header>
   <main id="content">
     <section class="page-head">
       <div class="shell">
-        <span class="eyebrow">Collaborate</span>
-        <h1>Build the right team around the question.</h1>
-        <p class="lead">RCC works with researchers, institutions, data stewards, students, and funders on projects that fit its scope and benefit from interdisciplinary coordination. A strong proposal begins with a clear question, a realistic path to data or participants, and an honest account of the expertise still needed.</p>
+        <p class="eyebrow">Collaborate</p>
+        <h1>Collaborate with RCC</h1>
+        <p class="lead">RCC develops projects that benefit from interdisciplinary collaboration, specialized methods, public or existing datasets, and coordinated operational support. We welcome proposals from researchers, clinicians, analysts, independent scholars, institutions, and prospective project partners.</p>
       </div>
     </section>
 
     <section class="section">
       <div class="shell">
         <div class="area-3">
-          <div class="area"><span class="eyebrow">Research collaboration</span><p>Bring a defined question, theory, dataset, or study concept that would benefit from additional expertise or an organizational home.</p></div>
-          <div class="area"><span class="eyebrow">Data and methods partnership</span><p>Work with RCC on secondary analysis, quantitative design, neuroimaging, EEG, longitudinal modeling, computational methods, or reproducible workflows.</p></div>
-          <div class="area"><span class="eyebrow">Student and early-career participation</span><p>Contribute to a defined project through supervised analysis, literature review, data preparation, coding, or research communication.</p></div>
+          <div class="area"><h3>Bring a question</h3><p>Propose a research question that requires expertise beyond a single discipline or laboratory.</p></div>
+          <div class="area"><h3>Bring a dataset</h3><p>Identify an existing or public dataset that could support a novel, rigorous, and mission-aligned analysis.</p></div>
+          <div class="area"><h3>Bring a capability</h3><p>Contribute scientific, clinical, computational, methodological, operational, or humanistic expertise to an emerging project.</p></div>
         </div>
       </div>
     </section>
 
     <section class="section section-paper">
       <div class="shell measure">
-        <div class="prose">
-          <h2>Start a conversation</h2>
-          <p>Write to <a href="mailto:contact@religiouscognitioncollab.org">contact@religiouscognitioncollab.org</a>. A strong inquiry describes the question you want to pursue, the kind of collaboration you are seeking, and what data, participants, funding, or approvals already exist. We respond if the proposal appears to fit RCC's scope and current capacity.</p>
-        </div>
-        <p style="margin-top:22px"><a class="btn btn-primary" href="mailto:contact@religiouscognitioncollab.org">Email us</a></p>
+        <div class="section-head"><h2>Propose a collaboration</h2><p>Share as much or as little as you like. Submitting opens your email app with the details addressed to contact@religiouscognitioncollab.org.</p></div>
+        <form class="form" data-mailto="contact@religiouscognitioncollab.org" data-subject="Collaboration proposal — RCC">
+          <div class="form-grid">
+            <label class="field field-wide"><span>Name</span><input type="text" name="name" required></label>
+            <label class="field field-wide"><span>Email</span><input type="email" name="email" required></label>
+            <label class="field field-wide"><span>Institution or independent affiliation</span><input type="text" name="affiliation"></label>
+            <label class="field field-wide"><span>Brief description</span><textarea name="description" rows="4"></textarea></label>
+          </div>
+          <details class="form-more">
+            <summary>Add project details (optional)</summary>
+            <div class="form-grid">
+              <label class="field field-wide"><span>Proposed project or contribution</span><input type="text" name="proposal"></label>
+              <label class="field field-wide"><span>Research question</span><input type="text" name="question"></label>
+              <label class="field field-wide"><span>Available dataset or resources</span><input type="text" name="dataset"></label>
+              <label class="field field-wide"><span>Expertise available</span><input type="text" name="have"></label>
+              <label class="field field-wide"><span>Expertise needed</span><input type="text" name="need"></label>
+              <label class="field field-wide"><span>Funding status</span><select name="funding"><option value="" selected disabled>Select…</option><option>Unfunded</option><option>Seeking funding</option><option>Proposal under review</option><option>Funded</option><option>Not applicable</option></select></label>
+            </div>
+          </details>
+          <div class="form-foot">
+            <button class="btn btn-primary" type="submit">Propose a Collaboration</button>
+            <p class="form-note">To include a concept note, attach it to the email that opens.</p>
+            <p class="form-status" hidden>Your email app should now be open. Send the message to complete your proposal.</p>
+          </div>
+        </form>
       </div>
     </section>
   </main>
   <footer class="site-footer">
     <div class="shell">
       <div class="footer-top">
-        <div>
-          <p class="footer-name">Religious Cognition Collaborative</p>
-          <p>Interdisciplinary research on religion, cognition, and human experience.</p>
-          <p class="footer-sponsor">True Dreams Project Fund, doing business as Religious Cognition Collaborative, is a tax-exempt 501(c)(3) organization.</p>
-        </div>
-        <div class="footer-reach">
-          <div class="eyebrow">Contact</div>
+        <a class="footer-brand" href="../" aria-label="The Religious Cognition Collaborative home">
+          <span class="footer-badge"><img src="../assets/logo-icon.png" width="256" height="256" alt=""></span>
+          <span class="footer-word">The Religious Cognition<br>Collaborative</span>
+        </a>
+        <p class="footer-sentence">The Religious Cognition Collaborative develops interdisciplinary research on religion, cognition, neuroscience, consciousness, and culture.</p>
+      </div>
+      <div class="footer-bottom">
+        <nav class="footer-nav" aria-label="Footer"><a href="../about/">About</a><a href="../research/">Research</a><a href="../projects/">Projects</a><a href="../collaborate/" aria-current="page">Collaborate</a><a href="../contact/">Contact</a><a href="../privacy/">Privacy</a></nav>
+        <div class="footer-meta">
           <a href="mailto:contact@religiouscognitioncollab.org">contact@religiouscognitioncollab.org</a>
+          <span>&copy; 2026 The Religious Cognition Collaborative</span>
         </div>
       </div>
-      <nav class="footer-nav" aria-label="Footer"><a href="../about/">About</a><a href="../research/">Research</a><a href="../projects/">Projects</a><a href="../contact/">Contact</a><a href="../collaborate/" aria-current="page">Collaborate</a><a href="../privacy/">Privacy</a></nav>
-      <div class="footer-bottom"><span>&copy; 2026 Religious Cognition Collaborative. All rights reserved.</span><span>Interdisciplinary research on religion, cognition, and human experience.</span></div>
     </div>
   </footer>
 </body>

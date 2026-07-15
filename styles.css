@@ -155,6 +155,12 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 500; letter-spacing: -0.012
 .def h3 { font-size: 1.18rem; margin: 0 0 8px; }
 .def p { color: var(--muted); margin: 0; font-size: .98rem; }
 
+/* research network / people */
+.people-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 24px 32px; }
+.person { padding: 20px 0; border-top: 1px solid var(--line); }
+.person-name { font-family: var(--serif); font-size: 1.12rem; margin: 0 0 4px; color: var(--ink); }
+.person-role { color: var(--muted); margin: 0; font-size: .92rem; }
+
 /* ---------------------------------------------------------------- project detail */
 .proj-groups { display: flex; flex-direction: column; gap: clamp(40px, 5vw, 60px); }
 .proj-group-title { font-size: 1.3rem; margin: 0 0 20px; padding-bottom: 12px; border-bottom: 1px solid var(--line); color: var(--ink); }
@@ -168,6 +174,11 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 500; letter-spacing: -0.012
 .initiative-desc { color: var(--muted); margin: 12px 0 0; max-width: 62ch; }
 .initiative-lead { margin: 14px 0 0; font-size: .9rem; color: var(--ink); }
 .initiative-lead span { display: inline-block; margin-right: 8px; font-size: .68rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+.initiative-projects-label { font-size: .68rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin: 0 0 14px; }
+.initiative-projects { margin-left: clamp(8px, 2vw, 20px); }
+.initiative-project { max-width: 94%; border-left: 3px solid var(--teal-strong); background: var(--paper); border-radius: 0 14px 14px 0; }
+.initiative-project .card { border: 0; background: transparent; border-radius: 0 14px 14px 0; }
+.initiative-project .card:hover { transform: none; box-shadow: none; }
 .project-top { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(260px, .8fr); gap: clamp(32px, 5vw, 64px); align-items: start; }
 .prose-stack { display: flex; flex-direction: column; gap: 30px; }
 .facts { border: 1px solid var(--line-strong); border-radius: 14px; padding: 24px 26px; background: var(--paper); position: static; }
@@ -178,6 +189,7 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 500; letter-spacing: -0.012
 .facts dt { font-size: .72rem; text-transform: uppercase; letter-spacing: .06em; font-weight: 700; color: var(--muted); margin: 0; }
 .facts dd { margin: 0; font-size: .96rem; }
 .facts dd a { color: var(--teal-strong); text-decoration: underline; text-underline-offset: 2px; }
+.facts .row-quiet dd { font-size: .85rem; font-weight: 400; color: var(--muted); }
 .disclosure { border-left: 3px solid var(--gold); padding: 4px 0 4px 20px; }
 .disclosure p { margin: 0; color: var(--muted); font-size: .98rem; }
 

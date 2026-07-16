@@ -130,6 +130,7 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 500; letter-spacing: -0.012
 
 /* ---------------------------------------------------------------- research areas / pathways */
 .area-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.area-3 + .text-link { margin-top: 28px; }
 .area { padding: 26px 24px; border: 1px solid var(--line-strong); border-radius: 14px; background: var(--white); }
 .section-paper .area { background: var(--white); }
 .area h3 { font-size: 1.2rem; margin: 0 0 10px; }
@@ -151,9 +152,6 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 500; letter-spacing: -0.012
 .prose a { color: var(--teal-strong); text-decoration: underline; text-underline-offset: 3px; }
 .prose ul { margin: 14px 0 0; padding-left: 1.15rem; color: var(--muted); }
 .prose li { margin: 7px 0; }
-.def-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px 44px; }
-.def h3 { font-size: 1.18rem; margin: 0 0 8px; }
-.def p { color: var(--muted); margin: 0; font-size: .98rem; }
 
 /* research network / people */
 .people-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 24px 32px; }
@@ -244,7 +242,7 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 500; letter-spacing: -0.012
 
 /* ---------------------------------------------------------------- responsive */
 @media (max-width: 880px) {
-  .prose-cols, .def-grid, .domain, .project-top, .area-3 { grid-template-columns: 1fr; }
+  .prose-cols, .domain, .project-top, .area-3 { grid-template-columns: 1fr; }
   .area-3 { gap: 16px; }
   .domain { gap: 10px; }
 }
